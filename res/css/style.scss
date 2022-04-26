@@ -65,15 +65,32 @@ header  {
         padding: 48px;
         padding-bottom: 0;
 
+        @media (max-width: 900px) {
+            flex-direction: column;
+
+            .left {
+                margin-right: 0 !important;
+            }
+        }
+
         > .left {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-right: 24px;
+
+            @media (min-width: 901px) {
+                margin-right: 24px;
+            }
 
             img.grenade {
-                height: 400px;
+                @media (min-width: 901px) {
+                    height: 400px;
+                }
+                
                 margin-top: auto;
+                max-width: 100%;
+                object-fit: contain;
+                object-position: bottom;
             }
 
             h1 {
@@ -88,6 +105,12 @@ header  {
 
         > .right {
             padding-bottom: 48px;
+
+            @media (max-width: 900px) {
+                background-color: $darker-spanish-gray;
+                margin: 0 -48px;
+                padding: 24px 32px;
+            }
         }
     }
 }
