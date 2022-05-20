@@ -5,51 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarocafé</title>
     <link rel="stylesheet" href="/res/css/style.css">
+    <link rel="stylesheet" href="/res/css/tarocursor.css">
+    <link rel="shortcut icon" href="res/img/symbol-light-1.svg" type="image/svg+xml">
 </head>
 <body>
-    <nav class="has-container">
-        <div class="container">
-            <!--<a href="#">Accueil</a>
-            <a href="#">Projets</a>
-            <a href="https://twitter.com/kukicaffee">Twitter</a>-->
-            <a href="https://github.com/tarocafe">Github</a>
-        </div>
-    </nav>
-    <header class="has-container">
-        <div class="container">
-            <div class="left">
-                <h1>Tarocafé</h1>
-                <p>(N'aime pas le café)</p>
-                <img class="grenade" src="/res/img/grenade-transparent.png">
-            </div>
-            <div class="right">
-                <h1>Présentation</h1>
-                <p>
-                    Je suis lycéen, j'ai 16 ans, passionné par l'informatique depuis l'âge de 10 ans.<br>
-                    Je maîtrise le language HTML, CSS (et SCSS), et à peu près le Javascript.
-                </p>
-
-                <h1>Créations</h1>
-                <ul>
-                    <li>La page où vous vous situez.</li>
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://sketchub.in">La page de présentation de l'application Sketchub</a>
-                    </li>
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://tauten.net">La page d'accueil, le design, ainsi que la mascotte de Tauten.net</a>
-                    </li>
-                </ul>
-
-                <h1>Me contacter</h1>
-                <ul>
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/tarocafe">Sur Github</a>
-                    </li>
-                    <li>Sur Discord : Tarocafé#5042</li>
-                </ul>
-                <p>Je n'ai, pour l'instant, pas d'adresse E-mail « professionnelle ».</p>
-            </div>
-        </div>
+    <header>
+        <img src="/res/img/symbol-light.svg" class="symbol">
+        <h1>Tarocafé.</h1>
+        <p>- scroll -</p>
     </header>
+    <main>
+        <section>
+            <h1>
+                My Works
+            </h1>
+            <p>
+                I'm not a professional and I don't take any commissions.<br>
+                I only work for myself, these works are the result of my <strike>wasted</strike> free time. :)
+            </p>
+
+            <!-- Sketchub -->
+            <h2>
+                <img src="/res/img/symbol-light-1.svg">
+                Sketchub's Homepage
+            </h2>
+            <p>
+                This is the "first" serious web page I've done.<br>
+                I made it around the start of 2021.<br>
+                It shows different features of the Application.
+            </p>
+            <a href="https://sketchub.in">sketchub.in</a>
+
+            <!-- Tauten -->
+            <h2>
+                <img src="/res/img/symbol-light-1.svg">
+                Tauten
+            </h2>
+            <p>
+                A website maintained by me and a friend.<br>
+                It's where we host most of our projects, like (very) experimental apps and software, or servers.<br>
+                I'm the designer, I make most of the frontend, icons, etc.<br>
+                I also made the mascot! He's called 1010 (TenTen)!
+            </p>
+            <a href="https://tauten.net">tauten.net</a>
+
+            <!-- This website -->
+            <h2>
+                <img src="/res/img/symbol-light-1.svg">
+                This website!
+            </h2>
+            <p>
+                Except the font (called Libre Caslon), the layout, the animations, the style, the icons, basically everything here, was made by me.<br>
+                I tried to keep it simple while it looks good, and I think I did a great job.<br>
+                I hope you like it!!
+            </p>
+        </section>
+        <section>
+            <h1>About me...</h1>
+            <p>
+                I'm 16 but I'm still an idiot...<br>
+                I don't really drink coffee... (sorry)<br>
+                I like cats... Like I'm obsessed with cats, but also with cookies, <i>Frangipane</i> and <i>Galette des rois</i> somehow...<br>
+                My favorite video game right now is <a href="https://ddnet.tw">DDRaceNetwork</a>...<br>
+                I own 3 computers, 2 of them are laptops, and one of the laptops is used as a server...<br>
+                I also own a PS Vita, a Wii U and a Wii (old times!!)...<br>
+                <br>
+                And... I don't really have much more to say about me...<br>
+                Oh wait! I forgot to write "I use arch btw"...
+            </p>
+        </section>
+        <footer>
+            <img src="/res/img/text-light.svg" class="text-logo">
+            <p>copyright © Tarocafé</p>
+            <p>
+                <a href="https://github.com/Tarocafe">Github</a>
+                <img src="/res/img/symbol-light-1.svg">
+                <a href="https://twitter.com/kukicaffee">Twitter</a>
+                <img src="/res/img/symbol-light-1.svg">
+                Discord: Tarocafe#0542
+            </p>
+        </footer>
+    </main>
+    <div class="tarocursor">
+        <div></div>
+    </div>
 </body>
+<script src="/res/js/taroutils.js"></script>
+<script src="/res/js/tarocursor.js"></script>
 </html>

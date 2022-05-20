@@ -1,146 +1,113 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
 
-html, body {
-    height: 100%;
-}
-
-$spanish-gray: #A49B98ff;
-$darker-spanish-gray: #8a817f;
-$cultured: #F9F9F9ff;
-$isabelline: #F1E8E3ff;
-$pale-silver: #BEB6B3ff;
-$cadet-grey: #99A0A8ff;
+body, html { height: 100% }
 
 body {
-    font-family: 'Inter', sans-serif;
-    @supports (font-variation-settings: normal) { font-family: 'Inter var', sans-serif }
+    color: #FFA7A7;
+    background-color: white;
+    font-family: 'Libre Caslon Text', serif;
     margin: 0;
-    background-color: $darker-spanish-gray;
+    overflow-x: hidden;
 }
 
-.has-container {
-    > .container {
-        max-width: 1000px;
-        margin: auto;
-        box-sizing: border-box;
+h1, h2, h3 {
+    font-weight: 400;
+    font-family: "Libre Caslon Display";
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6vh;
+
+    img {
+        height: 3vh;
+        margin-right: 1.5vh;
     }
 }
 
-nav {
-    background-color: $pale-silver;
-    color: white;
-    text-shadow: 0 1px rgba(black, 0.4);
+h2 {
+    font-size: 4vh;
 
-    .container {
-        display: flex;
-        padding: 0 24px;
-        justify-content: center;
-
-        a {
-            height: 32px;
-            display: flex;
-            align-items: center;
-            padding: 0 8px;
-        }
+    img {
+        height: 2vh;
+        margin-right: 1vh;
     }
 }
 
-header  {
-    background-color: $spanish-gray;
-    color: white;
-    text-shadow: 0 1px rgba(black, 0.4);
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 2vh;
 
-    /*.container {
-        display: flex;
-        box-sizing: border-box;
-        padding: 48px;
-        padding-bottom: 0;
-        flex-direction: column;
-        align-items: center;
-    }*/
-
-    .container {
-        display: flex;
-        justify-content: center;
-        padding: 48px;
-        padding-bottom: 0;
-
-        @media (max-width: 900px) {
-            flex-direction: column;
-
-            .left {
-                margin-right: 0 !important;
-            }
-        }
-
-        > .left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            @media (min-width: 901px) {
-                margin-right: 24px;
-            }
-
-            img.grenade {
-                @media (min-width: 901px) {
-                    height: 400px;
-                }
-                
-                margin-top: auto;
-                max-width: 100%;
-                object-fit: contain;
-                object-position: bottom;
-            }
-
-            h1 {
-                font-size: 64px;
-                font-weight: 600;
-                letter-spacing: -2.9px;
-                margin: 0;
-            }
-
-            p { font-size: 13px; }
-        }
-
-        > .right {
-            padding-bottom: 48px;
-
-            @media (max-width: 900px) {
-                background-color: $darker-spanish-gray;
-                margin: 0 -48px;
-                padding: 24px 32px;
-            }
-        }
+    .symbol {
+        height: 10vh;
+    }
+    
+    h1 {
+        margin: 0;
     }
 }
 
 main {
+    position: relative;
+    z-index: 1;
+    margin-top: calc(100vh + 128px);
+    min-height: 100%;
+    padding: 24px;
+
+    > section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 12px 0;
+    }
+}
+
+footer {
+    display: flex;
+    font-size: 14px;
+    padding: 128px 24px;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .text-logo {
+        height: 32px;
+    }
+
+    p img {
+        height: 13px;
+        margin: 0 4px;
+    }
+}
+
+::selection {
+    background-color: #FFA7A7;
+    color: white;
 }
 
 a {
     color: inherit;
-
-    &::after {
-        content: "↗";
-        margin-left: 4px;
-    }
+    transition: .5s;
 
     &:hover {
-        background-color: $isabelline;
-        color: black;
-        text-shadow: none;
+        color: white;
+        background-color: #FFA7A7;
     }
 
-    &:not(:hover) {
-        text-decoration: none;
+    &:active {
+        transform: scale(0.75);
+        transition: .1s;
     }
 }
 
 p {
-    line-height: 1.3;
-}
-
-li {
-    margin-bottom: 4px;
+    line-height: 1.5;
 }
