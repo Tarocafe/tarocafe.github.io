@@ -1,37 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
+@import "../fonts/IBM-Plex-Sans/font.css";
+@import "../fonts/IBM-Plex-Mono/font.css";
+@import "../fonts/MajorMonoDisplay/font.css";
 body, html {
   height: 100%;
 }
 
 body {
-  color: #FFA7A7;
-  background-color: white;
-  font-family: "Libre Caslon Text", serif;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  font-family: "IBM Plex Sans", serif;
   margin: 0;
   overflow-x: hidden;
+  --primary-color: white;
+  --secondary-color: #ffa7a7;
 }
 
 h1, h2, h3 {
-  font-weight: 400;
-  font-family: "Libre Caslon Display";
+  font-family: "IBM Plex Sans";
   display: flex;
   align-items: center;
 }
 
 h1 {
-  font-size: 6vh;
+  font-size: 32px;
+  font-weight: 500;
 }
 h1 img {
-  height: 3vh;
-  margin-right: 1.5vh;
+  height: 24px;
 }
 
 h2 {
-  font-size: 4vh;
+  font-size: 24px;
+  font-weight: 600;
 }
 h2 img {
-  height: 2vh;
-  margin-right: 1vh;
+  height: 16px;
 }
 
 header {
@@ -44,10 +48,19 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  font-size: 2vh;
+}
+header h1 {
+  font-size: 48px;
 }
 header .symbol {
-  height: 10vh;
+  height: 64px;
+}
+header .text-logo {
+  height: 32px;
+  margin-top: 16px;
+}
+header .chevron {
+  margin-top: 16px;
 }
 header h1 {
   margin: 0;
@@ -63,7 +76,7 @@ main {
 main > section {
   max-width: 1000px;
   margin: auto;
-  padding: 12px 0;
+  padding: 1px 0;
 }
 
 footer {
@@ -83,28 +96,71 @@ footer p img {
 }
 
 ::-moz-selection {
-  background-color: #FFA7A7;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 ::selection {
-  background-color: #FFA7A7;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 a {
   color: inherit;
-  transition: 0.5s;
+  transition: 0.1s;
+  font-weight: 600;
 }
 a:hover {
-  color: white;
-  background-color: #FFA7A7;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 a:active {
   transform: scale(0.75);
   transition: 0.1s;
 }
+a > * {
+  pointer-events: none;
+}
 
 p {
   line-height: 1.5;
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none;
+  }
+
+  .tarocursor {
+    position: fixed;
+    top: -24px;
+    left: -24px;
+    height: 24px;
+    width: 24px;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999;
+    opacity: 0.1;
+  }
+  .tarocursor > div {
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    transition: transform 0.5s, width 0.2s, height 0.2s;
+  }
+  .tarocursor.down > div {
+    transform: scale(0.75);
+    transition: transform 0.1s, width 0.2s, height 0.2s;
+  }
+  .tarocursor.link > div {
+    transform: scale(0);
+    transition: transform 0.1s, width 0.2s, height 0.2s;
+  }
+  .tarocursor.text > div {
+    height: 32px;
+    width: 4px;
+  }
 }

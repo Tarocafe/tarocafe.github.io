@@ -5,83 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarocafé</title>
     <link rel="stylesheet" href="/res/css/style.css">
-    <link rel="stylesheet" href="/res/css/tarocursor.css">
-    <link rel="shortcut icon" href="res/img/symbol-light-1.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="res/img/symbol-dark.svg" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+    <link rel="shortcut icon" href="res/img/symbol-light.svg" media="(prefers-color-scheme: light)" type="image/svg+xml"> <!-- media queries doesn't seem to work for favicons :/ -->
 </head>
 <body>
     <header>
-        <img src="/res/img/symbol-light.svg" class="symbol">
-        <h1>Tarocafé.</h1>
-        <p>- scroll -</p>
+        <img src="/res/img/symbol-dark.svg" class="symbol">
+        <img src="/res/img/text-dark-no-star.svg" class="text-logo" alt="Tarocafé">
+        <img src="/res/img/chevron_down.svg" class="chevron">
     </header>
     <main>
         <section>
             <h1>
-                My Works
+                <img class="icon" src="/res/img/star.svg">
+                About me
+            </h1>
+            <p>
+                My username is Tarocafé, I'm 16 years old and I live in region Île-de-France.<br>
+                The username "Tarocafé" doesn't really have a meaning, and honestly I don't even drink coffee.<br>
+            </p>
+            <p>
+                My passion for computers started when I was 8 years old, and started to do web development around december 2017. I never stopped since then.<br>
+                I'm currently planning to use the <a href="https://www.rust-lang.org/">Rust language</a> for my next programming projects.<br>
+                I stopped using Windows as my main operating system in 2020, and now I mainly use Linux distributions on my computers.
+            </p>
+        </section>
+        <section>
+            <h1>
+                <img class="icon" src="/res/img/star.svg">
+                My Projects
             </h1>
             <p>
                 I'm not a professional and I don't take any commissions.<br>
-                I only work for myself, these works are the result of my <strike>wasted</strike> free time. :)
+                I only work for myself, these works are the result of my <strike>wasted</strike> free time.
+            </p>
+
+            <!-- Tauten -->
+            <h2><a href="https://tauten.net">Tauten Network</a></h2>
+            <p>
+                A website maintained by me and a friend.<br>
+                It's where we host most of our projects, like (very) experimental apps and software, or servers.<br>
+                I'm mostly the designer, I make most of the frontend, icons, etc.<br>
+                I also made the mascot! He's called 1010 (TenTen)!
             </p>
 
             <!-- Sketchub -->
-            <h2>
-                <img src="/res/img/symbol-light-1.svg">
-                Sketchub's Homepage
-            </h2>
+            <h2><a href="https://sketchub.in">Sketchub's Homepage</a></h2>
             <p>
                 This is the "first" serious web page I've done.<br>
                 I made it around the start of 2021.<br>
                 It shows different features of the Application.
             </p>
-            <a href="https://sketchub.in">sketchub.in</a>
-
-            <!-- Tauten -->
-            <h2>
-                <img src="/res/img/symbol-light-1.svg">
-                Tauten
-            </h2>
-            <p>
-                A website maintained by me and a friend.<br>
-                It's where we host most of our projects, like (very) experimental apps and software, or servers.<br>
-                I'm the designer, I make most of the frontend, icons, etc.<br>
-                I also made the mascot! He's called 1010 (TenTen)!
-            </p>
-            <a href="https://tauten.net">tauten.net</a>
 
             <!-- This website -->
             <h2>
-                <img src="/res/img/symbol-light-1.svg">
-                This website!
+                This website
             </h2>
             <p>
-                Except the font (called Libre Caslon), the layout, the animations, the style, the icons, basically everything here, was made by me.<br>
-                I tried to keep it simple while it looks good, and I think I did a great job.<br>
-                I hope you like it!!
-            </p>
-        </section>
-        <section>
-            <h1>About me...</h1>
-            <p>
-                I'm 16 but I'm still an idiot...<br>
-                I don't really drink coffee... (sorry)<br>
-                I like cats... Like I'm obsessed with cats, but also with cookies, <i>Frangipane</i> and <i>Galette des rois</i> somehow...<br>
-                My favorite video game right now is <a href="https://ddnet.tw">DDRaceNetwork</a>...<br>
-                I own 3 computers, 2 of them are laptops, and one of the laptops is used as a server...<br>
-                I also own a PS Vita, a Wii U and a Wii (old times!!)...<br>
-                <br>
-                And... I don't really have much more to say about me...<br>
-                Oh wait! I forgot to write "I use arch btw"...
+                The layout, the animations, the style, the icons, basically everything here (except the fonts), has been made by me.<br>
+                I tried to keep it simple while making it looking good, and I think I did a great job.<br>
             </p>
         </section>
         <footer>
-            <img src="/res/img/text-light.svg" class="text-logo">
-            <p>copyright © Tarocafé</p>
+            <img src="/res/img/text-dark.svg" class="text-logo icon">
+            <p>copyright © Tarocafé, 2022</p>
             <p>
                 <a href="https://github.com/Tarocafe">Github</a>
-                <img src="/res/img/symbol-light-1.svg">
+                <img src="/res/img/symbol-dark-1.svg" class="icon">
                 <a href="https://twitter.com/kukicaffee">Twitter</a>
-                <img src="/res/img/symbol-light-1.svg">
+                <img src="/res/img/symbol-dark-1.svg" class="icon">
                 Discord: Tarocafe#0542
             </p>
         </footer>

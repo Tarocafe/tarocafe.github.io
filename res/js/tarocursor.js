@@ -46,8 +46,9 @@ body.onscroll = () => {
     $(".tarocursor").style.opacity = scrRatio.positive + .1
     $$("header *:not(.symbol)")[0].style.opacity = scrRatio.negative
     $$("header *:not(.symbol)")[1].style.opacity = scrRatio.negative
+    $$("header *:not(.symbol)")[1].style.transform = `translateY(${scrRatio.positive * 32}px)`
     $("header .symbol").style.opacity = scrRatio.negative + .1
-    $("header .symbol").style.transform = `translateY(${scrRatio.positive * 6}vh) scale(${1 + scrRatio.positive}) rotate(${360 * window.scrollY / 2e3}deg)`
+    $("header .symbol").style.transform = `translateY(${scrRatio.positive * 64}px) scale(${1 + scrRatio.positive}) rotate(${360 * window.scrollY / 2e3}deg)`
     // inutile $("header").style.pointerEvents = Math.floor(scrRatio.negative) ? "none" : "all"
 
 }
