@@ -10,7 +10,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   --primary-color: white;
-  --secondary-color: #ffa7a7;
+  --secondary-color: #9580ff;
+}
+
+.icon {
+  transform: var(--symbol-transform);
 }
 
 h1, h2, h3 {
@@ -111,10 +115,6 @@ a:hover {
   color: var(--secondary-color);
   background-color: var(--primary-color);
 }
-a:active {
-  transform: scale(0.75);
-  transition: 0.1s;
-}
 a > * {
   pointer-events: none;
 }
@@ -127,7 +127,6 @@ p {
   * {
     cursor: none;
   }
-
   .tarocursor {
     position: fixed;
     top: -24px;

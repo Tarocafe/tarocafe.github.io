@@ -44,11 +44,13 @@ body.onscroll = () => {
     if (scrRatio.negative < 0) scrRatio.negative = 0
 
     $(".tarocursor").style.opacity = scrRatio.positive + .1
+    $("body").style.setProperty("--secondary-color", `hsl(${250 + Math.sin(window.scrollY / 5e2) * 20}, 100%, 75%)`)
+    //$("body").style.setProperty("--symbol-transform", `translateX(${(Math.sin(window.scrollY / 100) * 2) -1 }px) rotate(${360 * window.scrollY / 2e3}deg)`)
     $$("header *:not(.symbol)")[0].style.opacity = scrRatio.negative
     $$("header *:not(.symbol)")[1].style.opacity = scrRatio.negative
     $$("header *:not(.symbol)")[1].style.transform = `translateY(${scrRatio.positive * 32}px)`
     $("header .symbol").style.opacity = scrRatio.negative + .1
-    $("header .symbol").style.transform = `translateY(${scrRatio.positive * 64}px) scale(${1 + scrRatio.positive}) rotate(${360 * window.scrollY / 2e3}deg)`
+    $("header .symbol").style.transform = `translateY(${scrRatio.positive * 64 + (Math.sin(window.scrollY / 1e2) * 10)}px) scale(${1 + scrRatio.positive}) rotate(${360 * window.scrollY / 2e3}deg)`
     // inutile $("header").style.pointerEvents = Math.floor(scrRatio.negative) ? "none" : "all"
 
 }
